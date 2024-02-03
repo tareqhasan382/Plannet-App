@@ -1,4 +1,4 @@
-import { View, StyleSheet, Pressable } from "react-native";
+import { View, StyleSheet, Pressable, Switch } from "react-native";
 import React from "react";
 import Text from "./text/text";
 import { spacing } from "../theme/spacing";
@@ -18,7 +18,11 @@ export default function PlanetHeader({ backButton, title = "The Planets" }) {
           <Ionicons name="caret-back" size={30} color="white" />
         </Pressable>
       )}
-      <Text preset="h2">{title}</Text>
+      <View className=" w-full flex flex-row justify-between ">
+        <Text preset="h2">{title}</Text>
+        {/* <Switch /> */}
+      </View>
+      <View></View>
     </View>
   );
 }

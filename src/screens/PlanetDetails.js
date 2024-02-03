@@ -27,7 +27,7 @@ export default function PlanetDetails({ route }) {
           <View className="items-center justify-center py-4 ">
             <Image
               source={{
-                uri: "https://www.pngall.com/wp-content/uploads/2/Mercury-Planet-Transparent.png",
+                uri: planet.ImgUrl,
               }}
               className=" h-56 w-56 "
               resizeMode="contain"
