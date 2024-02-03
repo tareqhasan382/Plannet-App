@@ -17,7 +17,10 @@ export default function Home({ navigation }) {
     <SafeAreaView>
       <View>
         <PlanetHeader />
-        <ScrollView>
+        <ScrollView
+          showsHorizontalScrollIndicator={true}
+          className=" space-x-5 "
+        >
           <FlatList
             className=" p-4 "
             data={PlanetList}
@@ -31,11 +34,11 @@ export default function Home({ navigation }) {
                 >
                   <View className=" flex flex-row items-center space-x-2 py-2 ">
                     <View
-                      style={{ backgroundColor: item.color }}
+                      style={{ backgroundColor: item.Color }}
                       className=" h-6 w-6 rounded-full "
                     />
                     <Text preset="h4" className=" uppercase ">
-                      {item.name}{" "}
+                      {item.Name}
                     </Text>
                   </View>
                   <AntDesign name="right" size={16} color="white" />
@@ -45,8 +48,8 @@ export default function Home({ navigation }) {
             keyExtractor={(item, index) => index}
             ItemSeparatorComponent={() => <View style={styles.separator} />}
           />
-          <View className=" h-40 w-full py-10 " />
         </ScrollView>
+        <View className=" h-40 w-full py-10 " />
       </View>
     </SafeAreaView>
   );
